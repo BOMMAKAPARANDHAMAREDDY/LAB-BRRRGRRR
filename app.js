@@ -107,6 +107,7 @@ function renderButtons() {
 };
 //Challenge 2 - Render only the items selected in the ingredients board based on the state
 function renderIngredientsBoard() {
+  document.getElementById("patty").style.visibility = state.Patty ? "visible" : "hidden";
   document.getElementById("cheese").style.visibility = state.Cheese ? "visible" : "hidden";
   document.getElementById("tomato").style.visibility = state.Tomatoes ? "visible" : "hidden";
   document.getElementById("onion").style.visibility = state.Onions ? "visible" : "hidden";
@@ -116,6 +117,12 @@ function renderIngredientsBoard() {
 //In the p element having price-details as the class, display the calculated
 //price based on ingredients
 function renderPrice() {
-  var price = basePrice + (state.Cheese * cheesePrice) + (state.Tomatoes * tomatoPrice) + (state.Onions * onionPrice) + (state.Lettuce * lettucePrice);
+  var basePrice = 20
+  var  cheesePrice = 10
+  let tomatoPrice = 20
+  let onionPrice = 20
+  let lettucePrice = 20
+  let pattyPrice = 80
+  var price = basePrice +(state.Cheese * cheesePrice) + (state.Tomatoes * tomatoPrice) + (state.Onions * onionPrice) + (state.Lettuce * lettucePrice) + (state.Patty * pattyPrice);
   document.querySelector(".price-details").innerText = "INR " + price;
 };
