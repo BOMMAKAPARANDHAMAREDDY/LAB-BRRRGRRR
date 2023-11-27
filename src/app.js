@@ -107,7 +107,6 @@ function renderButtons() {
 };
 //Challenge 2 - Render only the items selected in the ingredients board based on the state
 function renderIngredientsBoard() {
-  document.getElementById("patty").style.visibility = state.Pattyatty ? "visible" : "hidden";
   document.getElementById("cheese").style.visibility = state.Cheese ? "visible" : "hidden";
   document.getElementById("tomato").style.visibility = state.Tomatoes ? "visible" : "hidden";
   document.getElementById("onion").style.visibility = state.Onions ? "visible" : "hidden";
